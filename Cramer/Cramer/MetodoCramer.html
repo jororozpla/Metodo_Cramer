@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Cramer</title>
+
+<style>
+
+.boton {
+background: rgb(246, 211, 15);
+    }
+.panel{
+background-color: green;
+}
+input{
+background-color: white;
+}
+    body, td {
+        font-family: "Arial", Times, serif; style ="background: rgb(112, 182, 84);
+    }
+
+
+</style>
+
+   <script >
+
+     var a=new Array(3);ax=new Array(3);ay=new Array(3);az=new Array(3);
+
+function det(a)
+
+{
+
+var mostrar=document.getElementById("procedimiento").value;
+
+deta=a[1][1]*a[2][2]*a[3][3]+a[1][2]*a[2][3]*a[3][1]+a[2][1]*a[3][2]*a[1][3];
+
+mostrar+="Determinate de a="+deta+"    \n";
+
+detb=a[1][3]*a[2][2]*a[3][1]+a[2][3]*a[3][2]*a[1][1]+a[1][2]*a[2][1]*a[3][3];
+
+mostrar+="Determinate de b="+detb+"    \n";
+determ=deta-detb;
+
+mostrar+="Igual=  "+determ+"   \n";
+document.getElementById("procedimiento").value=mostrar;
+
+return determ;
+
+}
+
+function cramer()
+
+ {    
+
+
+
+     for(i=1;i<=3;i++)
+      {
+      a[i]=[0,0,0,0];ax[i]=[0,0,0,0];ay[i]=[0,0,0,0];az[i]=[0,0,0,0];
+
+        for(j=1;j<=4;j++)
+         { 
+             a[i][j]=parseFloat(document.matriz[4*i+j-5].value)
+               ax[i][j]=a[i][j];
+               ay[i][j]=a[i][j];
+               az[i][j]=a[i][j];    
+              
+           }
+       }
+
+     for(i=1;i<=3;i++)
+
+      {
+     ax[i][1]=a[i][4];
+     ay[i][2]=a[i][4];
+     az[i][3]=a[i][4]; 
+      }
+
+
+var mos=document.getElementById("procedimiento").value;
+            
+            document.matriz.x.value=det(ax)/det(a);
+             mos+=document.getElementById("procedimiento").value;
+            mos+="X: "+document.matriz.x.value+"\n";
+            document.matriz.y.value=det(ay)/det(a);
+            mos+=document.getElementById("procedimiento").value;
+            mos+="Y: "+document.matriz.y.value+"\n";
+            document.matriz.z.value=det(az)/det(a);
+            mos+=document.getElementById("procedimiento").value;
+            mos+="Z: "+document.matriz.z.value+"\n"; 
+            
+   document.getElementById("procedimiento").value=mos;
+
+  }
+
+
+   
+
+  </script>
+
+ </head>
+
+<body text=black bgcolor=teal>
+
+    <p style="text-align: center;"><span style="font-size: 19.2px;"><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Solucion de Ecuaciones</font></font></font></font></b></span></p>
+
+    <p style="text-align: center;"><span style="font-size: 19.2px;"><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Metodo de Cramer</font></font></font></font></b></span></p>
+<BR>
+
+<form name="matriz">
+    <div class="panel" style="background: rgb(212, 122, 24); border: 1px solid rgb(204, 204, 204); padding: 5px 10px; text-align: center;">
+        <BR>
+
+        <input disabled value= "0.3" text size="3">
+        <input disabled value= "0.52" text size="3">
+        <input disabled value= "1" text size="3"> =
+
+        <input disabled value= "-0.01" text size="3">
+        <BR>
+        <BR>
+
+        <input disabled value= "0.5" text size="3">
+        <input disabled value= "1" text size="3">
+        <input disabled value= "1.93" text size="3"> =
+
+        <input disabled value= "0.67" text size="3">
+        <BR>
+        <BR>
+
+        <input disabled value= "0.1" text size="3">
+        <input disabled value= "0.3" text size="3">
+        <input disabled value= "0.5" text size="3"> =
+
+        <input disabled value= "-0.44" text size="3">
+
+        <!--<input type="text" size="3">
+        <input type="text" size="3">
+        <input type="text" size="3"> =
+
+        <input type="text" size="3">-->
+        <BR />
+        <BR />
+</div>
+		<BR><BR>
+
+
+       	 <input type="button" value = "Resolver por metodo de Cramer " class="boton" onClick="cramer()"><BR><BR>
+
+    <textarea disabled rows="16" cols="50" id="procedimiento">
+    </textarea>
+    <label for="Label1">Solución generada por la regla de Cramer:</label><br /><br />
+
+    <center>
+
+        <br>
+        <br>
+
+        x = <input disabled type="text" name="x" size=" 5 ">
+        y = <input disabled type="text" name="y" size=" 5 ">
+        z = <input disabled type="text" name="z" size=" 5 "><BR>  <BR>
+        <BR>
+
+</form>
+
+ </body>
+<body>
+
+</body>
+</html>

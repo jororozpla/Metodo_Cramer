@@ -1,0 +1,9 @@
+C:\Users\Jorge Orozco\source\repos\Cramer\Cramer\bin\Cramer.dll.config
+C:\Users\Jorge Orozco\source\repos\Cramer\Cramer\bin\Cramer.dll
+C:\Users\Jorge Orozco\source\repos\Cramer\Cramer\bin\Cramer.pdb
+C:\Users\Jorge Orozco\source\repos\Cramer\Cramer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Jorge Orozco\source\repos\Cramer\Cramer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Jorge Orozco\source\repos\Cramer\Cramer\obj\Release\Cramer.csprojResolveAssemblyReference.cache
+C:\Users\Jorge Orozco\source\repos\Cramer\Cramer\obj\Release\Cramer.csproj.CoreCompileInputs.cache
+C:\Users\Jorge Orozco\source\repos\Cramer\Cramer\obj\Release\Cramer.dll
+C:\Users\Jorge Orozco\source\repos\Cramer\Cramer\obj\Release\Cramer.pdb
